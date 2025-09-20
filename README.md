@@ -24,7 +24,7 @@ transfer-learning pipeline with evaluation.
 
 ---
 
-## Quick Start
+
 
 ### 1) Clone or download
 ```bash
