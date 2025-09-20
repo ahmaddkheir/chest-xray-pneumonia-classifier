@@ -1,18 +1,16 @@
-````markdown
 # Chest X-Ray Pneumonia Classifier
 
-This project uses TensorFlow/Keras to classify chest X-ray images as "Normal" or "Pneumonia".  
-It demonstrates a full workflow: data loading, preprocessing, a small CNN baseline, and a MobileNetV2 
-transfer-learning pipeline with evaluation.
+This project uses **TensorFlow/Keras** to classify chest X-ray images as **Normal** or **Pneumonia**.  
+It demonstrates the full workflow: dataset handling, preprocessing, a baseline CNN model, and a **MobileNetV2** transfer learning pipeline with evaluation.
 
 ---
 
 ## Features
-- Data loading via `image_dataset_from_directory`
-- Normalization and on-the-fly data augmentation
+- Data loading with `image_dataset_from_directory`
+- Image normalization and on-the-fly data augmentation
 - Baseline CNN model
 - Transfer learning with **MobileNetV2**
-- Metrics: accuracy, precision, recall, F1
+- Evaluation metrics: accuracy, precision, recall, F1-score
 - Confusion matrix and classification report
 
 ---
@@ -21,19 +19,17 @@ transfer-learning pipeline with evaluation.
 - `main.ipynb` — end-to-end notebook (data → training → evaluation)
 - `requirements.txt` — Python dependencies
 
-
 ---
 
+## Setup Instructions
 
-
-### 1) Clone or download
+### 1) Clone the repository
 ```bash
 git clone https://github.com/<YOUR_USERNAME>/<REPO_NAME>.git
 cd <REPO_NAME>
-````
+```
 
-### 2) Create a virtual environment (recommended)
-
+### 2) Create and activate a virtual environment (recommended)
 ```bash
 python -m venv .venv
 # macOS/Linux
@@ -43,14 +39,12 @@ source .venv/bin/activate
 ```
 
 ### 3) Install dependencies
-
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 ### 4) Launch the notebook
-
 ```bash
 jupyter notebook main.ipynb
 ```
@@ -59,14 +53,15 @@ jupyter notebook main.ipynb
 
 ## Dataset
 
-The dataset is **not included** in this repository. Use the Kaggle API to download **Chest X-Ray Images (Pneumonia)**:
+The dataset is **not included** in this repository.  
+Download **Chest X-Ray Images (Pneumonia)** using the Kaggle API:
 
 ```bash
 kaggle datasets download -d paultimothymooney/chest-xray-pneumonia
 unzip chest-xray-pneumonia.zip -d data/
 ```
 
-The typical directory layout after extraction is:
+Expected directory structure after extraction:
 
 ```
 data/
@@ -82,36 +77,27 @@ data/
       PNEUMONIA/
 ```
 
-
-
 ---
 
 ## How to Run (in the notebook)
 
-1. Set the dataset path in the notebook to the extracted folder (e.g., `data/chest_xray`).
-2. Execute the cells in order:
-
-   * Data loading and preprocessing
-   * Baseline CNN training
-   * MobileNetV2 transfer learning
-   * Evaluation (classification report + confusion matrix)
+1. Update the dataset path in the notebook (e.g., `data/chest_xray`).
+2. Run the notebook cells in order:
+   - Data loading and preprocessing
+   - Baseline CNN training
+   - MobileNetV2 transfer learning
+   - Model evaluation (classification report + confusion matrix)
 
 ---
 
 ## Results and Evaluation
 
-The notebook prints key metrics and plots:
+The notebook provides:
+- Training vs. validation accuracy/loss curves
+- Confusion matrix visualization
+- Classification metrics (precision, recall, F1-score)
 
-* Training/validation accuracy and loss curves
-* Confusion matrix
-* Precision, recall, and F1-score
-
-Use these to compare the baseline vs. transfer-learning performance.
+These outputs allow direct comparison between the **baseline CNN** and **MobileNetV2 transfer learning**.
 
 ---
 
-
-
-
-```
-```
