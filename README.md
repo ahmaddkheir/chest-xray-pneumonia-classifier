@@ -1,7 +1,7 @@
 ````markdown
 # Chest X-Ray Pneumonia Classifier
 
-This project uses TensorFlow/Keras to classify chest X-ray images as **Normal** or **Pneumonia**.  
+This project uses TensorFlow/Keras to classify chest X-ray images as "Normal" or "Pneumonia".  
 It demonstrates a full workflow: data loading, preprocessing, a small CNN baseline, and a MobileNetV2 
 transfer-learning pipeline with evaluation.
 
